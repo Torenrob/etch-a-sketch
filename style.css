@@ -13,7 +13,6 @@ body {
 	height: 100vh;
 	background: rgb(22, 22, 22);
 	display: grid;
-	grid-template-columns: 2fr 4fr 2fr;
 	grid-template-rows: 1fr 7fr 1fr;
 	grid-template-areas:
 		"title title title"
@@ -23,18 +22,22 @@ body {
 
 #title {
 	font-family: titleFont;
-	font-size: 60px;
-	padding-top: 10px;
+	font-size: 3.75rem;
+	padding-top: 0.625rem;
 	color: rgb(116, 1, 19);
 	font-weight: bolder;
 	text-align: center;
+	justify-self: center;
 	grid-area: title;
 }
 
 #etchBoard {
+	justify-self: center;
+	height: 46.083rem;
+	width: 60rem;
 	background-color: rgb(85, 1, 14);
 	grid-area: etchBoard;
-	border-radius: 55px;
+	border-radius: 3.4375rem;
 	display: grid;
 	grid-template-columns: 1fr 5fr;
 	grid-template-rows: 1fr 1fr;
@@ -49,12 +52,12 @@ body {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	padding: 80px;
+	padding: 5rem;
 }
 
 .colorSelect {
-	width: 25px;
-	height: 25px;
+	width: 1.5625rem;
+	height: 1.5625rem;
 }
 
 #dimPicker {
@@ -62,43 +65,70 @@ body {
 	rotate: 270deg;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 85px;
+	margin-bottom: 5.3125rem;
 	accent-color: black;
 }
 
 #etchContainer {
 	grid-area: etchCont;
-	border-radius: 55px;
-	box-shadow: -2.35px 0px 10px -2px rgba(0, 0, 0, 0.377);
+	border-radius: 3.4375rem;
+	box-shadow: -0.1469rem 0rem 0.625rem -0.125rem rgba(0, 0, 0, 0.377);
 	background-color: rgb(116, 1, 19);
+	display: grid;
+	grid-template-columns: 0.75fr 10fr 0.75fr;
+	grid-template-rows: 0.75fr 9fr 0.5fr 1fr;
+	grid-template-areas:
+		". . ."
+		". sketchBoard ."
+		". shakeBtn ."
+		"colorAndDim colorAndDim colorAndDim";
+}
+
+#colorAndDim {
+	grid-area: colorAndDim;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#etchSketch {
+	grid-area: sketchBoard;
+	background-color: rgb(37, 36, 36);
+	display: grid;
+}
+
+#shakeBtn {
+	grid-area: shakeBtn;
+	border-bottom-right-radius: 3.4375rem;
+	border-bottom-left-radius: 3.4375rem;
 }
 
 /* Style Color Picker */
 input[type="color"] {
-	border: solid 0.2px rgb(118, 118, 118);
+	border: solid 0.0125rem rgb(118, 118, 118);
 	background-color: rgb(118, 118, 118);
-	border-radius: 50px;
-	width: 25px;
-	height: 25px;
+	border-radius: 3.125rem;
+	width: 1.5625rem;
+	height: 1.5625rem;
 }
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
 }
 input[type="color"]::-webkit-color-swatch {
-	border: solid 0.2px rgb(118, 118, 118);
-	border-radius: 50px;
+	border: solid 0.0125rem rgb(118, 118, 118);
+	border-radius: 3.125rem;
 }
 input[type="color"]::-moz-color-swatch-wrapper {
 	padding: 0;
 }
 input[type="color"]::-moz-color-swatch {
-	border: solid 0.2px rgb(118, 118, 118);
-	border-radius: 50px;
+	border: solid 0.0125rem rgb(118, 118, 118);
+	border-radius: 3.125rem;
 }
 /* End of Color Picker Styling */
 
 .etchNode {
-	background-color: rgb(31, 29, 29);
+	background-color: rgb(22, 179, 56);
 }
 
 #footer {
