@@ -95,6 +95,9 @@ body {
 	grid-area: sketchBoard;
 	background-color: rgb(37, 36, 36);
 	display: grid;
+	gap: 0rem;
+	/* justify-content: center;
+	align-content: center; */
 }
 
 #shakeBtn {
@@ -105,8 +108,7 @@ body {
 
 /* Style Color Picker */
 input[type="color"] {
-	border: solid 0.0125rem rgb(118, 118, 118);
-	background-color: rgb(118, 118, 118);
+	border: solid 0.0125rem rgb(0, 0, 0);
 	border-radius: 3.125rem;
 	width: 1.5625rem;
 	height: 1.5625rem;
@@ -115,14 +117,14 @@ input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
 }
 input[type="color"]::-webkit-color-swatch {
-	border: solid 0.0125rem rgb(118, 118, 118);
+	border: solid 0.0125rem rgb(0, 0, 0);
 	border-radius: 3.125rem;
 }
 input[type="color"]::-moz-color-swatch-wrapper {
 	padding: 0;
 }
 input[type="color"]::-moz-color-swatch {
-	border: solid 0.0125rem rgb(118, 118, 118);
+	border: solid 0.0125rem rgb(0, 0, 0);
 	border-radius: 3.125rem;
 }
 /* End of Color Picker Styling */

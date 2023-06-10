@@ -1,24 +1,27 @@
-let etchContainer = document.getElementById("etchContainer");
-color = document.getElementById("colorPick");
+const defaultDimension = 16;
+const defaultColor = "rgb(116, 1, 19)";
 
-function gridMaker(columns) {
-	let etchSketch = document.getElementById("etchSketch");
-	let templateColumns = "1fr";
+let sketchBoard = document.getElementById("etchSketch");
+dimensionSlider = document.getElementById("gridDims");
+colorWheel = document.getElementById("colorPicker");
+colorRadio = document.getElementsByName("color");
+shakeBtn = document.getElementById("shakeBtn");
+colorDisplay = document.getElementById("penColor");
+dimensionDisplay = document.getElementById("boardDims");
+let currentDimension;
 
-	for (i = 0; i < columns - 1; i++) {
-		templateColumns += " 1fr";
-	}
+dimensionSlider.addEventListener("change", (e) => {
+	currentDimension = e.target.value;
+});
 
-	etchSketch.style.gridTemplateColumns = templateColumns;
-}
+function makeSketchNodes(dimensions) {
+	sketchBoard.style.gridTemplateColumns = `repeat(${dimensions}, 1fr)`;
+	sketchBoard.style.gridTemplateRows = `repeat(${dimensions}, 1fr)`;
 
-function makeEtchGrid(rows, columns) {
-	let nNodes = +(rows * columns);
-	for (i = 0; i < nNodes; ++i) {
+	let nNodes = Math.pow(dimensions, 2);
+	for (i = 0; i < nNodes; i++) {
 		let etchNode = document.createElement("div");
-		etchSketch.append(etchNode);
-		etchNode.className = "etchNode";
+		etchNode.classList.add("etchNode");
+		sketchBoard.appendChild("etchNode");
 	}
-
-	gridMaker(columns);
 }
