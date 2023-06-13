@@ -21,6 +21,8 @@ body {
 }
 
 #title {
+	position: relative;
+	animation-duration: 1s;
 	font-family: titleFont;
 	font-size: 3.75rem;
 	font-weight: bolder;
@@ -33,17 +35,39 @@ body {
 }
 
 @keyframes shakeBoard {
-	0% {left: 3.125rem}
-	10% {left: -3.125rem}
-	20% {left: 3.125rem}
-	30% {lef: -3.125rem}
-	40% {left: 3.125rem}
-	50% {left: -3.125rem}
-	60% {left: 3.125rem}
-	70% {left: -3.125rem}
-	80% {lef: 3.125rem}
-	90% {left: -3.125rem}
-	100% {left: 0rem}
+	0% {
+		left: 3.125rem;
+	}
+	10% {
+		left: -3.125rem;
+	}
+	20% {
+		left: 3.125rem;
+	}
+	30% {
+		lef: -3.125rem;
+	}
+	40% {
+		left: 3.125rem;
+	}
+	50% {
+		left: -3.125rem;
+	}
+	60% {
+		left: 3.125rem;
+	}
+	70% {
+		left: -3.125rem;
+	}
+	80% {
+		lef: 3.125rem;
+	}
+	90% {
+		left: -3.125rem;
+	}
+	100% {
+		left: 0rem;
+	}
 }
 
 #etchBoard {
